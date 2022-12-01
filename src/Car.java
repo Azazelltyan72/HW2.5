@@ -1,4 +1,4 @@
-public class Car extends Motor_Transport {
+public class Car extends Motor_Transport implements Competing {
     private String color;
     private final String bodyType;
     private final String transmission;
@@ -57,5 +57,20 @@ public class Car extends Motor_Transport {
                 ", transmission ='" + transmission + '\'' +
                 ", engineCapacity ='" + String.format("%.2f", getEngineCapacity()) +
                 '}';
+    }
+
+    @Override
+    public void pitStop() {
+        System.out.println(("Автомобиль " + this.getBrand() + " " +  this.getModel() + " делает пит-стоп (техническую оставку)."));
+    }
+
+    @Override
+    public void maxSpeed() {
+        System.out.println(("Автомобиль " + this.getBrand() + " " +  this.getModel() + " достигает максимальной скорости."));
+    }
+
+    @Override
+    public void bestTime() {
+        System.out.println(("У автомобиля " + this.getBrand() + " " +  this.getModel() + " лучшее время."));
     }
 }

@@ -30,5 +30,13 @@ public class Main {
         Truck gazel4 = new Truck("Газель", "Рута", 110);
         System.out.println(gazel4);
         gazel4.finishMoving();
+
+        neman.pitStop();
+        neman.maxSpeed();
+        neman.bestTime();
+        audi.pitStop();
+        gazel.maxSpeed();
+        kia.bestTime();
+
     }
 }

@@ -1,4 +1,4 @@
-public class Bus extends Motor_Transport{
+public class Bus extends Motor_Transport implements Competing {
     private String color;
     @Override
     public void startMoving() {
@@ -26,6 +26,7 @@ public class Bus extends Motor_Transport{
             this.color = color;
         }
     }
+
     @Override
     public String toString() {
         return "Bus{" +
@@ -35,4 +36,21 @@ public class Bus extends Motor_Transport{
                 ", engineCapacity ='" + String.format("%.2f", getEngineCapacity()) +
                 '}';
     }
+
+    @Override
+    public void pitStop() {
+        System.out.println(("Автобус " + this.getBrand() + " " +  this.getModel() + " делает пит-стоп (техническую оставку)."));
+    }
+
+    @Override
+    public void maxSpeed() {
+        System.out.println(("Автобус " + this.getBrand() + " " +  this.getModel() + " достигает максимальной скорости."));
+    }
+
+    @Override
+    public void bestTime() {
+        System.out.println(("У автобуса " + this.getBrand() + " " +  this.getModel() + " лучшее время."));
+    }
+
+
 }

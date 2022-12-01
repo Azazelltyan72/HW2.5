@@ -1,5 +1,5 @@
 public interface Competing {
-    String[] pitStop();
-    Double[] maxSpeed();
-    Double[] bestTime();
+    void pitStop();
+    void maxSpeed();
+    void bestTime();
 }
